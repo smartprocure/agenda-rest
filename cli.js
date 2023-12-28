@@ -29,7 +29,7 @@ const settings = require("./settings");
 
 let values = program._optionValues
 
-settings.dburi = valuesvaluesvaluesvalues.dburi || settings.dburi;
+settings.dburi = values.dburi || settings.dburi;
 settings.dbname = values.dbname || settings.dbname;
 settings.dbhost = values.dbhost || settings.dbhost;
 settings.appId = values.key || settings.appId;
