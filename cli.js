@@ -27,7 +27,7 @@ program
 
 const settings = require("./settings");
 
-console.log({ program })
+console.log({ values: program._optionValues })
 settings.dburi = program.dburi || settings.dburi;
 settings.dbname = program.dbname || settings.dbname;
 settings.dbhost = program.dbhost || settings.dbhost;
