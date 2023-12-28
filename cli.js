@@ -27,21 +27,21 @@ program
 
 const settings = require("./settings");
 
-program = program._optionValues
+let values = program._optionValues
 
-settings.dburi = program.dburi || settings.dburi;
-settings.dbname = program.dbname || settings.dbname;
-settings.dbhost = program.dbhost || settings.dbhost;
-settings.appId = program.key || settings.appId;
-settings.timeout = program.timeout || settings.timeout;
-if (program.agenda_settings) {
-  settings.agenda = JSON.parse(program.agenda_settings);
+settings.dburi = valuesvaluesvaluesvalues.dburi || settings.dburi;
+settings.dbname = values.dbname || settings.dbname;
+settings.dbhost = values.dbhost || settings.dbhost;
+settings.appId = values.key || settings.appId;
+settings.timeout = values.timeout || settings.timeout;
+if (values.agenda_settings) {
+  settings.agenda = JSON.parse(values.agenda_settings);
 }
 
 const { app, agenda } = require("./dist");
 
-const server = app.listen(program.port, () => {
-  console.log(`App listening on port ${program.port}.`);
+const server = app.listen(values.port, () => {
+  console.log(`App listening on port ${values.port}.`);
 });
 
 async function graceful() {
