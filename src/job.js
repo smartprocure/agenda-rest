@@ -90,7 +90,7 @@ const defineJob = async (job, jobs, agenda) => {
 const deleteJob = async (job, jobs, agenda) => {
   const numRemoved = await agenda.cancel(job);
   const obj = await jobs.remove(job);
-  return `removed ${obj.result.n} job definitions and ${numRemoved} job instances.`;
+  return `removed ${obj.result ? obj.result.n : 'N/A' } job definitions and ${numRemoved} job instances.`;
 };
 
 const cancelJob = async (job, jobs, agenda) => {
